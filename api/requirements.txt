@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+python-dotenv
+google-cloud-storage
+minio
+supabase
+google-generativeai
+openai
+flask
+flask-cors

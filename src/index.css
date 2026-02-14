@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* 自定义样式 */
+@layer components {
+  .news-card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  .news-title-cn {
+    @apply text-lg font-bold text-gray-900 dark:text-white;
+  }
+  .news-title-id {
+    @apply text-sm text-gray-500 dark:text-gray-400 mt-1;
+  }
+  .article-paragraph-cn {
+    @apply text-gray-900 dark:text-white my-4;
+  }
+  .article-paragraph-id {
+    @apply text-gray-600 dark:text-gray-300 my-2 pl-4 border-l-2 border-gray-200 dark:border-gray-700;
+  }
+  .lookup-button {
+    @apply bg-primary text-white px-4 py-2 rounded-full shadow-md hover:bg-primary/90 transition-all duration-200;
+  }
+  .word-highlight {
+    @apply text-accent font-bold bg-accent/10 px-1 rounded;
+  }
+  .highlighted-word {
+    color: #dc2626;
+    font-weight: bold;
+    background-color: #fef2f2;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  .dark .highlighted-word {
+    color: #fca5a5;
+    background-color: #7f1d1d;
+  }
+}

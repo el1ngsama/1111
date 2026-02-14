@@ -1,0 +1,39 @@
+name = "cc-test-worker"
+main = "api/index.js"
+compatibility_date = "2024-01-01"
+
+# D1 数据库绑定
+[[d1_databases]]
+binding = "DB"
+database_name = "cc-test-database"
+database_id = "6fec1b24-3c6c-4f94-aaa5-aa15b0ecaeb3"
+
+# 环境变量
+[vars]
+# Cloudflare Account ID
+CLOUDFLARE_ACCOUNT_ID = "ebc304d642ceaec2c9b3ca7f24539736"
+
+# DeepSeek API Key
+DEEPSEEK_API_KEY = "sk-58d565ce05854668b97c5209aeb5c595"
+
+# Cloudflare API Token
+CLOUDFLARE_API_TOKEN = "5bpeAAggUdULNIvmOAIvIRzRuR9nHN8TKHjO4nda"
+
+# Cloudflare R2 配置（用于图片存储）
+# R2_ENDPOINT = "your_r2_endpoint"
+# R2_ACCESS_KEY = "your_r2_access_key"
+# R2_SECRET_KEY = "your_r2_secret_key"
+# R2_BUCKET_NAME = "your_r2_bucket_name"
+# R2_PUBLIC_URL = "your_r2_public_url"
+
+# 生产环境配置
+[env.production]
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "cc-test-database-prod"
+database_id = "6fec1b24-3c6c-4f94-aaa5-aa15b0ecaeb3"
+
+[env.production.vars]
+CLOUDFLARE_ACCOUNT_ID = "ebc304d642ceaec2c9b3ca7f24539736"
+DEEPSEEK_API_KEY = "sk-58d565ce05854668b97c5209aeb5c595"
+CLOUDFLARE_API_TOKEN = "5bpeAAggUdULNIvmOAIvIRzRuR9nHN8TKHjO4nda"
